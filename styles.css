@@ -1,0 +1,105 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    --brand-brown-light: #A08C6E;
+    --brand-brown: #7D6D54;
+    --brand-brown-dark: #5C4D3C;
+    --brand-bg-light: #FBF8F3;
+    --brand-bg-gradient-start: #FDFBF8;
+    --brand-bg-gradient-end: #F5EFE6;
+}
+
+.home-gradient {
+     background-color: var(--brand-bg-gradient-end); 
+     background-image: linear-gradient(to bottom right, var(--brand-bg-gradient-start), var(--brand-bg-gradient-end));
+}
+
+.image-shape-container {
+  position: relative;
+  width: 90%; 
+  max-width: 400px; 
+  padding-bottom: 90%; 
+  margin: auto; 
+}
+
+.image-shape-background {
+  position: absolute;
+  inset: 0;
+  border-radius: 45% 55% 40% 60% / 60% 50% 55% 45%; 
+  transform: rotate(-15deg); 
+  border: 6px solid var(--brand-brown-light); 
+  background: linear-gradient(135deg, var(--brand-bg-light) 60%, #e9ecef 100%); 
+  overflow: hidden; /* Clip the image */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.image-shape-background img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transform: rotate(15deg); 
+  scale: 1.1; 
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px; 
+  height: 1.1em; 
+  background-color: var(--brand-brown); 
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+  vertical-align: bottom; 
+}
+
+@keyframes blink {
+    0%, 100% { 
+      opacity: 1;
+    } 
+    50% { 
+      opacity: 0;
+    } 
+  }
+
+.text-brand-brown {
+    color: var(--brand-brown);
+}
+.border-brand-brown {
+    border-color: var(--brand-brown) !important; 
+}
+.btn-brand-brown {
+    background-color: var(--brand-brown);
+    border-color: var(--brand-brown);
+    color: #fff;
+}
+.btn-brand-brown:hover {
+    background-color: var(--brand-brown-dark);
+    border-color: var(--brand-brown-dark);
+    color: #fff;
+}
+.btn-outline-brand-brown-light {
+    color: var(--brand-brown-light);
+    border-color: var(--brand-brown-light);
+}
+.btn-outline-brand-brown-light:hover {
+    color: #fff;
+    background-color: var(--brand-brown-light);
+    border-color: var(--brand-brown-light);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+#home {
+     padding-top: 7rem; 
+     padding-bottom: 3rem;
+}
+
+#projects .card {
+    height: 100%;
+}
